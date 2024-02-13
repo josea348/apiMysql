@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/estilos.css">
+    <title>Documentación de la API</title>
+</head>
+<body>
+    <h1>Documentación de la API</h1>
+    <hr>
+    <h2>Requerimiento 1. Documentacion del ENDPOINT USUARIO</h2>
+    <table>
+        <tr>
+            <td>NÚMERO</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>NOMBRE DE SERVICIO</td>
+            <td>Listar usuario</td>
+        </tr>
+        <tr>
+            <td>URI</td>
+            <td>/usuario/listar</td>
+        </tr>
+        <tr>
+            <td>DESCRIPCIÓN</td>
+            <td>Permite listarlos usuariosre gistrados en la base de datos</td>
+        </tr>
+        <tr>
+            <td>VERBO HTTP</td>
+            <td>GET</td>
+        </tr>
+        <tr>
+            <td>HEADER</td>
+            <td>NULL</td>
+        </tr>
+        <tr>
+            <td>USUARIOS</td>
+            <td>Administrador</td>
+        </tr>
+        <tr>
+            <td>PETICIÓN json</td>
+            <td>{nombre:'Juanito'}</td>
+        </tr>
+        <tr>
+            <td>REPUESTA JSON</td>
+            <td>
+                Correcto:
+                Status: 200
+                {
+                "idusuario": 26,
+                "nombres": "Ramirez",
+                "direccion": "altos del magdalena ",
+                "telefono": "322391924",
+                "correo": "syiven@gamil.com",
+                "rol": "administrador",
+                "password": null
+              }
+              Incorrecto:
+              Status:{
+                status: 404,
+                message: "No se encontro usuarios registrados"
+              }
+              Error: 
+              status: 500,
+              body:{
+                status:500,message:"Error en el sistema"+e
+              }
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
