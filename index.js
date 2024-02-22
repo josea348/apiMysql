@@ -17,5 +17,5 @@ servidor.get('/documents',(req, res)=>{
 
 servidor.use('/usuarios',routerUsuario);
 servidor.listen(4001,()=>{
-    console.log('servidor corriendo el el puerto 4001');
+    console.log('servidor corriendo en el puerto 4001');
 });
