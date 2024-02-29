@@ -17,8 +17,8 @@ export const validarUser = async (req,res) => {
     }
 }
 
-/* export const validarToken = async (req, res,next) => {
-    let token_cliente = req.headers[token];
+export const validarToken = async (req, res,next) => {
+    let token_cliente = req.headers['token'];
     if (!token_cliente) {
         return res.status(404).json({'message': 'Se requiere el token.'})
     } else {
@@ -30,4 +30,4 @@ export const validarUser = async (req,res) => {
             }
         })
     }
-} */
+}
