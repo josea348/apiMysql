@@ -7,7 +7,7 @@ const storage = multer.diskStorage(
             cb(null,"public/img");
         },
         filename: function(req,img,cb){
-            cb(null,img.orinalname);
+            cb(null,img.originalname);
         }
     }
 );
@@ -19,7 +19,7 @@ export const guardarJuego = async (req,res) => {
     try {
         const {nombre,descripcion,precio} = req.body;
         let imagen = req.file.orinalname;
-        let sql = `insert into juegos (nombre,descripcion,precio) values ('${nombre}', '${descripcion}', '${imagen}', '${precio}')`;
+        let sql = `insert into juegos (nombre,descripcion,imagen,precio) values ('${nombre}', '${descripcion}', '${imagen}', '${precio}')`;
         const [result] = await pool.query(sql);
         if (result.affectedRows>0) {
             res.status(200).json({'message': 'Se registro el juego'});
